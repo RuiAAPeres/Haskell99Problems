@@ -19,3 +19,7 @@ exerc3 (x:xs) i = exerc3 xs (i-1)
 
 exerc3' :: [a] -> Int -> a
 exerc3' x i    = x !! (i-1)
+
+exerc4 :: [a] -> Int
+exerc4 x = length x
+
