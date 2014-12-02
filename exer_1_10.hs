@@ -32,3 +32,8 @@ exerc4'' list = exerc4''_acc list 0
 	where
 		exerc4''_acc [] n = n
 		exerc4''_acc (_:xs) n = exerc4''_acc xs (n + 1)
+
+
+exerc5 :: [a] -> [a]
+exerc5 [] = []
+exerc5 (x:xs) = exerc5 xs ++ [x]
