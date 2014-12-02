@@ -26,3 +26,9 @@ exerc4 x = length x
 exerc4' :: [a] -> Int
 exerc4' [] =  0
 exerc4' (_:xs) =  1 + exerc4 xs
+
+exerc4'' :: [a] -> Int
+exerc4'' list = exerc4''_acc list 0
+	where
+		exerc4''_acc [] n = n
+		exerc4''_acc (_:xs) n = exerc4''_acc xs (n + 1)
