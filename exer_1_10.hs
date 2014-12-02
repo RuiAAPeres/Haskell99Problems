@@ -37,3 +37,6 @@ exerc4'' list = exerc4''_acc list 0
 exerc5 :: [a] -> [a]
 exerc5 [] = []
 exerc5 (x:xs) = exerc5 xs ++ [x]
+
+exerc5' :: [a] -> [a]
+exerc5' x = (foldl(flip (:)))[] x
