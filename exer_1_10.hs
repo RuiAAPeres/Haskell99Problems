@@ -12,6 +12,8 @@ exerc2' :: [a] -> a
 exerc2' = (head . tail . reverse)
 
 exerc3 :: [a] -> Int -> a
+exerc3 _ 0 = error "Index starts at 1"
+exerc3 [] _ = error "No element for empty lists!"
 exerc3 (x:_) 1 = x
 exerc3 (x:xs) i = exerc3 xs (i-1)
 
