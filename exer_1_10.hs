@@ -40,3 +40,6 @@ exerc5 (x:xs) = exerc5 xs ++ [x]
 
 exerc5' :: [a] -> [a]
 exerc5' x = (foldl(flip (:)))[] x
+
+exerc6 :: Eq a => [a] -> Bool
+exerc6 x = x == (reverse x) 
