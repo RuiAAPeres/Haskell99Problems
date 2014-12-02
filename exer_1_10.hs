@@ -43,3 +43,9 @@ exerc5' x = (foldl(flip (:)))[] x
 
 exerc6 :: Eq a => [a] -> Bool
 exerc6 x = x == (reverse x) 
+
+data NestedList a = Elem a | List [NestedList a]
+
+exerc7 :: NestedList a -> [a]
+exerc7 (Elem x) = x
+exerc7 (List x) = concatMap exerc7 x 
