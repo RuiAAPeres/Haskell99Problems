@@ -10,3 +10,7 @@ exerc2 (x:xs) = exerc2 xs
 
 exerc2' :: [a] -> a
 exerc2' = (head . tail . reverse)
+
+exerc3 :: [a] -> Int -> a
+exerc3 (x:_) 1 = x
+exerc3 (x:xs) i = exerc3 xs (i-1)
