@@ -23,3 +23,6 @@ exerc3' x i    = x !! (i-1)
 exerc4 :: [a] -> Int
 exerc4 x = length x
 
+exerc4' :: [a] -> Int
+exerc4' [] =  0
+exerc4' (_:xs) =  1 + exerc4 xs
