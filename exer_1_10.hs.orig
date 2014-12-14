@@ -11,6 +11,12 @@ exerc2 (x:xs) = exerc2 xs
 exerc2' :: [a] -> a
 exerc2' = (head . tail . reverse)
 
+<<<<<<< HEAD
+
+exerc9 :: (Eq a) => [a] -> [[a]]
+exerc9 [] = []
+exerc9 r@(x:xs) = (takeWhile (==x) r : exerc9 (dropWhile (==x) xs))
+=======
 exerc3 :: [a] -> Int -> a
 exerc3 _ 0 = error "Index starts at 1"
 exerc3 [] _ = error "No element for empty lists!"
@@ -48,9 +54,5 @@ data NestedList a = Elem a | List [NestedList a]
 
 exerc7 :: NestedList a -> [a]
 exerc7 (Elem x) = x
-exerc7 (List x) = concatMap exerc7 x exerc2' = (head . tail . reverse)
-
-
-exerc9 :: (Eq a) => [a] -> [[a]]
-exerc9 [] = []
-exerc9 r@(x:xs) = (takeWhile (==x) r : exerc9 (dropWhile (==x) xs))
+exerc7 (List x) = concatMap exerc7 x 
+>>>>>>> 17d0b7b66c9098795314a3d59b7e43654c558f8a
